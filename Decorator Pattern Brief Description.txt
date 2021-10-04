@@ -1,0 +1,19 @@
+For this assignment i chose to implement the Decorator design pattern, because this
+allows me to extend the behaviour of a script in a modular way without modifying the original.
+
+I have used multiple different forums and youtube videos to get a good overview of what
+the design pattern is, and how it works in unity. I have also used Valentijn's explaination of his 
+implementation as a good reference.
+
+i found there to be a lot of different ways to implement the pattern, so i took the most relevant
+parts and tried to build it in a way that fits my game. i have used scriptableobjects as the modifiers so i can
+have pre-made modifiers with different settings.
+
+I decided to make Decorators for the Bullets, instead of the gun, because i felt like it would be nice to have different bullet-types which
+can be combined with all sorts of guns to get really interesting and crazy results, which is something i quite enjoy when
+playing Roguelike games which implement this sort of design pattern
+
+at first i struggled to understand how exactly the decorator worked in unity, and most resources i found were
+pretty basic, or not completely what i was looking for. i asked Mana for help, and we figured out a way to make it work,
+even though we both did not completely understand how it worked. we analyzed the resources and slowly pieced together our own
+implementation.
