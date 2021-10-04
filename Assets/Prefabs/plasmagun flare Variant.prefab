@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3590651508395355667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1000012903210382, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_Name
+      value: plasmagun flare
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3482351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3482351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3482351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.48853
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.4651413
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.1526427
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071069
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010921236120, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199000010259268804, guid: 4952a84eb0a54d1499a7b15512792645,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199000010420214726, guid: 4952a84eb0a54d1499a7b15512792645,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199336881837701072, guid: 4952a84eb0a54d1499a7b15512792645,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199422977892658642, guid: 4952a84eb0a54d1499a7b15512792645,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199671105658853138, guid: 4952a84eb0a54d1499a7b15512792645,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4952a84eb0a54d1499a7b15512792645, type: 3}
