@@ -419,6 +419,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &469003552
 Canvas:
   m_ObjectHideFlags: 0
@@ -949,6 +950,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1462476306
@@ -1096,7 +1098,7 @@ GameObject:
   - component: {fileID: 1948657945}
   - component: {fileID: 1948657947}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: MusicManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

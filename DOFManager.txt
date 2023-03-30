@@ -1,0 +1,56 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
+using TMPro;
+using Cinemachine;
+using Debug = UnityEngine.Debug;
+
+public class ArduinoTest : MonoBehaviour
+{
+    public GameObject postVolume;
+    private  PostProcessProfile postProfile;
+
+    public float potMultiplier;
+
+    private DepthOfField _dof;
+    public float potValue;
+    public float dofOffset;
+    private float defaultDistance;
+
+    public TextMeshProUGUI dofText;
+    
+
+    
+    // Start is called before the first frame update
+    // Use this for initialization
+    void Start ()
+    {
+        postProfile = postVolume.GetComponent<PostProcessVolume>().profile;
+        //defaultDistance = []';
+    }
+    
+    // Update is called once per frame
+    void Update ()
+    {
+        postProfile.TryGetSettings(out _dof);
+        _dof.focusDistance.value = (potMultiplier * potValue) + dofOffset;
+        dofText.text = "DOF: " + _dof.focusDistance.value;
+    }
+    
+    // Invoked when a line of data is received from the serial device.
+    void OnMessageArrived(string msg)
+    {
+        potValue = Tools.StringToFloat(msg, 0);
+    }
+
+    void OnConnectionEvent(bool success)
+    {
+        Debug.Log(success ? "Device connected" : "Device disconnected");
+    }
+    
+    
+}

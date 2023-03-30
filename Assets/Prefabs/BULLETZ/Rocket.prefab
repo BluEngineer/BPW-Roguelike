@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.616, y: 0.273, z: 6.4429}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1154783973512436238}
   - {fileID: 2660641172500059373}
@@ -81,10 +82,7 @@ MonoBehaviour:
   gunParent: {fileID: 0}
   rigidBody: {fileID: 0}
   lifeTimer: 0
-  bulletModifiers:
-  - {fileID: 11400000, guid: 60409eedc2f9d4446bcffe96e1f55274, type: 2}
-  - {fileID: 11400000, guid: 58e5155f46600f84e9f994510a60e481, type: 2}
-  - {fileID: 11400000, guid: 8d9b52313fb4cde479deefaab746c2d4, type: 2}
+  bulletModifiers: []
   explosionFX: {fileID: 1134129239631916, guid: 7e48ba6b1b968764490bbc70b66e3fe1,
     type: 3}
   enemyLayer:

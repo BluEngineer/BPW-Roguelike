@@ -8,11 +8,14 @@ public class RangedEnemy : Enemy
     public int bulletSpeed;
     public int coinDropAmount;
 
+    public float minShootTime;
+    public float maxShootTime;
+
     public GameObject coin;
     public GameObject enemyObject;
     public GameObject deathEffect;
 
-    public Vector3 bulletSize = new Vector3(1,1,1);
+    public Vector3 bulletSize = new Vector3(1, 1, 1);
 
     public GameObject tempAudioPlayer;
     public AudioSource audioSource;
@@ -20,16 +23,17 @@ public class RangedEnemy : Enemy
 
     public void Start()
     {
-        healthBar.maxValue = health;
-        healthBar.value = health;
+        Health = enemyMaxHP;
+        healthBar.maxValue = Health;
+        healthBar.value = Health;
         uiName.text = name;
         audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        healthBar.value = health;
-        if (health <= 0)
+        healthBar.value = Health;
+        if (Health <= 0)
         {
             Die();
         }
@@ -39,7 +43,7 @@ public class RangedEnemy : Enemy
     {
         if (collision.gameObject.GetComponent<Bullet>() && collision.gameObject.CompareTag("PlayerBullet"))
         {
-            healthBar.value = health;
+            healthBar.value = Health;
             GameObject.Destroy(collision.gameObject);
         }
 
@@ -47,7 +51,7 @@ public class RangedEnemy : Enemy
     }
 
     public void AttackBehaviour()
-    { 
+    {
         if (!GameManager.Instance.playerDead)
         {
             GameObject Player = GameObject.FindGameObjectWithTag("Player");
@@ -61,20 +65,20 @@ public class RangedEnemy : Enemy
             bullet.transform.position = gameObject.transform.position;
 
             bullet.GetComponent<Rigidbody>().velocity = ((new Vector3(dir.x, dir.y, dir.z)) * -1) * bulletSpeed;
-            bullet.GetComponent<Bullet>().bulletDamage = damage;
+            bullet.GetComponent<Bullet>().bulletDamage = enemyDamage;
             bullet.transform.localScale = bulletSize;
         }
     }
 
     public override void TakeDamage(int damage)
     {
-        health -= damage;
+        Health -= damage;
         audioSource.PlayOneShot(hitSound);
 
         Debug.Log("Enemy Damaged");
     }
 
-    public void Die()
+    protected override void Die()
     {
 
         for (int i = 0; i < coinDropAmount; i++)
@@ -90,3 +94,5 @@ public class RangedEnemy : Enemy
 
 
 }
+
+

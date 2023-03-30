@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class HealthComponent : MonoBehaviour, IDamageable
 {
+    public int Health
+    {
+        get;
+        set;
+    }
+    public int LastDamageTaken
+    {
+        get;
+        set;
+    }
+
+    public int GetHealth()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void TakeDamage(int damage)
     {
         if (!GameManager.Instance.playerDead)

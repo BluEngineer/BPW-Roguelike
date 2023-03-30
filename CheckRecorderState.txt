@@ -1,0 +1,97 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+using UnityEditor.Recorder;
+
+
+public class CheckEditorState : MonoBehaviour
+{
+    public bool isInEditMode;
+    public SerialController serialController;
+
+    public AudioClip startCamSound;
+    public AudioClip stopCamSound;
+    public AudioSource audioSource;
+    
+    private RecorderWindow GetRecorderWindow()
+    {
+        return (RecorderWindow)EditorWindow.GetWindow(typeof(RecorderWindow));
+    }
+
+    public RecorderWindow recorderWindow;
+    public string buttonState;
+
+    private void Start()
+    {
+
+    }
+    
+    private void Update()
+    {
+        int kaas = 1;
+        
+
+        
+        recorderWindow = GetRecorderWindow();
+
+        if (recorderWindow.IsRecording())
+        {
+            serialController.SendSerialMessage("A");
+            Debug.Log("CAMERA ON");
+        }
+        if(!recorderWindow.IsRecording())
+        {
+            serialController.SendSerialMessage("N");
+            Debug.Log("CAMERA OFF");
+
+        }
+        
+
+        
+    }
+    
+    
+    void OnMessageArrived(string msg)
+    {
+
+
+
+        buttonState = msg;
+        if (buttonState == "A")
+        {
+            audioSource.PlayOneShot(stopCamSound);
+
+            Debug.Log(buttonState);
+            
+            if (EditorApplication.isPlaying == true)
+            {
+              // EditorApplication.isPlaying = false;
+
+            }
+    
+            
+            if (!recorderWindow.IsRecording())
+            {
+
+                recorderWindow.StartRecording();
+                audioSource.PlayOneShot(startCamSound);
+
+                return;  
+            }
+
+
+            if (recorderWindow.IsRecording())
+            {
+                recorderWindow.StopRecording();
+                audioSource.PlayOneShot(stopCamSound);
+
+            }
+            buttonState = "N";
+
+
+        }
+
+        
+    }

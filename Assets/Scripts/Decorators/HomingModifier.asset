@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HomingModifier
   m_EditorClassIdentifier: 
   tempBullet: {fileID: 0}
-  homingPower: 9
+  homingPower: 3
   homingRange: 4

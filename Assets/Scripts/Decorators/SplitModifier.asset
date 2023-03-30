@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SplitModifier
   m_EditorClassIdentifier: 
   tempBullet: {fileID: 0}
-  splitMoment: 0.3
+  splitMoment: 0.1
   spreadAngle: 20
   bulletAmount: 2
   splitCount: 1

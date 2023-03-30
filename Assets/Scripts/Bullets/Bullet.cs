@@ -72,14 +72,14 @@ public abstract class Bullet : MonoBehaviour, IBullet
             Debug.Log("bullet collide with damageable");
             IDamageable hitobj = collision.gameObject.GetComponent<IDamageable>();
             hitobj.TakeDamage(CalculateDamage());
+        
+            hitobj.LastDamageTaken = CalculateDamage();
            // Debug.Log("bulletdamage is: " + CalculateDamage());
         }
 
         if (destroyOnCollision)
         {
             Destroy(this.gameObject);
-
-
         }
 
 

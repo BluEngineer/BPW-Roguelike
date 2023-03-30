@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3431954683168905967}
   - component: {fileID: 7544244830090092363}
   m_Layer: 15
-  m_Name: GenericBullet
+  m_Name: shotgunBullet
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.616, y: 0.273, z: 6.4429}
   m_LocalScale: {x: 0.14619187, y: 0.14619187, z: 0.14619187}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2660641172500059373}
   m_Father: {fileID: 0}
@@ -55,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -119,9 +121,8 @@ MonoBehaviour:
   rigidBody: {fileID: 0}
   lifeTimer: 0
   bulletModifiers:
-  - {fileID: 11400000, guid: 58e5155f46600f84e9f994510a60e481, type: 2}
   - {fileID: 11400000, guid: 60409eedc2f9d4446bcffe96e1f55274, type: 2}
-  - {fileID: 11400000, guid: 8d9b52313fb4cde479deefaab746c2d4, type: 2}
+  - {fileID: 11400000, guid: 58e5155f46600f84e9f994510a60e481, type: 2}
 --- !u!54 &7544244830090092363
 Rigidbody:
   m_ObjectHideFlags: 0
